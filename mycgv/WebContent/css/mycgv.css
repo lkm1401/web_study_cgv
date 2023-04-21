@@ -14,8 +14,12 @@ header {
 }
 .header_menu {	
 	border:1px solid red;		
-	width:1000px; 
+	width:1000px; height:300px;
 	margin:auto;
+}
+.header_menu nav {
+	border:2px solid blue;
+	
 }
 
 /*****************************
