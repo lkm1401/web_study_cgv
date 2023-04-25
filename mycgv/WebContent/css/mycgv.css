@@ -18,7 +18,7 @@ section.login form[name='loginForm'], section.join form[name='joinForm']
 	width:70%;
 	margin:auto;
 }
-.title {	 /* h1 제목 태그  스타일 */
+.title { /* h1 제목 태그  스타일 */
 	border-left:15px solid #333;
 	border-bottom:1px solid #333;
 	width:30%;
@@ -27,7 +27,9 @@ section.login form[name='loginForm'], section.join form[name='joinForm']
 	margin:30px 0 30px 100px;
 	font-style:italic;	
 }
-
+.btn_style {	/* 버튼 공통 스타일 */
+	
+}
 
 
 /*****************************
