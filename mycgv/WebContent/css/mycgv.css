@@ -75,15 +75,15 @@ header {
 	position: relative;
 }
 .header_menu > div > a {
-	position: absolute;
-	left: 30px;
-	top: 15px;
+	position:absolute;
+	top:20px;
+	left:20px;
 }
 .header_menu > div > div {
 	width: 400px;
 	position: absolute;
-	left: 420px;
-	top: 15px;
+	left: 320px;
+	top: 17px;
 	text-align:center;			
 }
 .header_menu > div > div  ul {
@@ -94,6 +94,9 @@ header {
 .header_menu > div > div  ul li{
 	list-style-type: none;
 	float:left;
+} 
+.header_menu > div > div  ul li:first-child{
+	padding-left:3px;
 } 
 .header_menu > div > div  ul li a{
 	display:block;
@@ -283,7 +286,7 @@ section.join form ul li > label {
 	font-weight:700;
 	float:left;
 	text-align:center;
-	margin:0 7px 5px 0;
+	margin:0 10px 5px 0;
 }
 .input1 {
 	width:40%;	
