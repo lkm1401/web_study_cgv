@@ -3,24 +3,152 @@
 ******************************/
 * {
 	padding:0px; margin:0px;
+	font-family:"나눔고딕";
 }
+.header_menu, .section1_d1, .section2, .section3, .footer_menu
+	,section.login, section.join, section.mypage, section.notice
+	,section.board, section.admin {
+	width:1000px; margin:auto;
+	border:1px solid blue;
+}
+section.login form[name='loginForm'], section.join form[name='joinForm']
+, section.mypage > div, section.notice table, section.board table
+, section.admin > div {
+	border:1px solid red;
+	width:70%;
+	margin:auto;
+}
+.title {	 /* h1 제목 태그  스타일 */
+	border-left:15px solid #333;
+	border-bottom:1px solid #333;
+	width:30%;
+	font-size:25pt;
+	padding:5px 0px 5px 20px;
+	margin:30px 0 30px 100px;
+	font-style:italic;	
+}
+
+
 
 /*****************************
 	Header style sheet
 ******************************/
 header {
-			background-image:url("http://localhost:9000/mycgv/images/bg_header.gif");
-			height:149px;
+	background-image: url(http://localhost:9000/mycgv/images/bg_header.gif);
+	height:149px;
 }
-.header_menu {	
-	border:1px solid red;		
-	width:1000px; height:300px;
-	margin:auto;
+.header_menu > nav > ul {
+	padding-left: 400px;
+	padding-top: 10px;
+	width: 100%; height: 30px;
 }
-.header_menu nav {
-	border:2px solid blue;
-	
+.header_menu > nav.nav1 > ul > li > a {
+	border-right: 1px solid DimGrey;
+	display: block;
+	text-decoration: none;
+	color: DimGrey;
+	width: 70px;
+	font-size: 12px;
+	text-align: center;
 }
+.header_menu > nav.nav1 > ul > li:last-child > a {
+	border-right: none;
+	color: red;
+}
+.header_menu > nav.nav1 > ul > li {
+	float: left;
+	list-style-type: none;
+}
+.header_menu > div {
+	clear: both;
+	height:100px;
+	position: relative;
+}
+.header_menu > div > a {
+	position: absolute;
+	left: 30px;
+	top: 15px;
+}
+.header_menu > div > div {
+	width: 400px;
+	position: absolute;
+	left: 420px;
+	top: 15px;
+	text-align:center;			
+}
+.header_menu > div > div  ul {
+	list-style-type: none;
+	margin:0px; padding:0px;
+	text-align:center;
+} 
+.header_menu > div > div  ul li{
+	list-style-type: none;
+	float:left;
+} 
+.header_menu > div > div  ul li a{
+	display:block;
+	text-decoration:none;
+	color:#555;
+	font-size:14pt;
+	font-weight:bold;
+	padding-top:3px;
+	margin:0 20px;
+}
+
+/*****************************
+	Footer style sheet
+******************************/
+.footer_bg {	
+	text-align:center;
+	background:rgb(254,218,152);
+	margin-top:50px;	
+}
+.footer_bg > img {
+	margin-top:-58px;
+}
+.footer_menu ul {
+	list-style-type:none;
+	margin:0px; padding:0px;
+	overflow:hidden;
+	border-bottom:1px solid lightgray;
+}
+.footer_menu ul > li {
+	float:left;
+}
+.footer_menu ul > li:last-child {
+	float:right;
+}
+.footer_menu ul > li > a {
+	display:block;
+	text-decoration:none;
+	padding:30px 32px 30px 2px;
+	font-size:10pt;
+	color:#777;
+	font-weight:700;
+}
+.footer_menu ul > li:last-child > a {
+	padding:30px 0px 30px 2px;
+}
+.footer_menu ul > li:nth-child(6) > a {
+	color:black;
+	text-decoration:underline;
+}
+.footer_menu ul > li > a:hover {
+	text-decoration:underline;
+} 
+.footer_menu > div {
+	margin:25px 0px 60px 0;
+	/* border:2px solid red; */
+}
+.footer_menu > div > p {	
+	font-size:13px;
+	color:#777;
+	padding:3px 0;
+}
+/* footer { 
+	border:2px solid red;
+	height:500px;
+} */
 
 /*****************************
 	Index-Content style sheet
@@ -29,9 +157,67 @@ header {
 			background-image:url("http://localhost:9000/mycgv/images/carousel_bg.png");
 }
 .section1_d1, .section2, .section3 {
-	width:1000px; margin:auto;
-	border:1px solid blue;
+	text-align:center;
+	/* border:1px solid blue; */
 }
+.section2 div:first-child, .section3 div:first-child {			
+	padding:20px 0px;
+}
+.section2 div:nth-child(2) {			
+	/* border:2px solid green; */
+	/* display:inline-block; */
+	float:left;
+}
+.section2 > img {
+	/* border:2px solid green; */
+	float:right;
+	width:265px; height:400px;
+}
+.section3 {			
+	clear:both;
+}
+.section3 > div:nth-child(2) >img:first-child ,
+ .section3 > div:last-child > img:first-child {			
+	float:left;
+}  
+.section3 > div:nth-child(2) >img:last-child ,
+ .section3 > div:last-child > img:last-child {			
+	float:right;
+}
+.section3 > div:nth-child(2) >img:nth-child(2)
+	, .section3 > div:nth-child(2) >img:nth-child(3){			
+	margin:0px 3px;	
+}
+.section3 > div:nth-child(2){
+	border-bottom:3px solid #555;
+	padding-bottom:25px;			
+}
+.section3 > div:nth-child(3){
+	padding-top:25px;
+}
+.section3 > div:nth-child(3) img:first-child,
+.section3 > div:nth-child(3) img:last-child {
+	border:7px double black;
+	/* outline:3px double black; */
+}
+
+/*****************************
+	Login Form style sheet
+******************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
