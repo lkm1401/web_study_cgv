@@ -455,14 +455,44 @@ section.board table.board_list tr:first-child td button{
 	width:70px;
 	padding:7px 0;
 }
-section.board form[name='writeForm'] table button {
+section.board form[name='writeForm'] table button,
+section.board table.board_content button,
+section.board form[name='updateForm'] table button {
 	width:100px;
 	margin:40px 5px;
 }
-
-
-
-
+section.board form[name='writeForm'] table th,
+section.board table.board_content th,
+section.board form[name='updateForm'] table th{
+	background:#ddd;
+	color:#333;	
+	width:140px;
+}
+section.board form[name='writeForm'] table td,
+section.board table.board_content td,
+section.board form[name='updateForm'] table td{
+	background:white;
+}
+section.board form[name='writeForm'] table input,
+section.board form[name='writeForm'] table textarea,
+section.board form[name='updateForm'] table input,
+section.board form[name='updateForm'] table textarea {
+	width:80%;	
+	padding:6px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+}
+section.board form[name='writeForm'] table,
+section.board form[name='updateForm'] table {
+	width:65%;
+}
+section.board form[name='writeForm'] table textarea,
+section.board form[name='updateForm'] table textarea {
+	height:140px;
+}
+/* section.board form[name='writeForm'] input[name='id'] {
+	font-weight:700;
+}  */
 
 
 
