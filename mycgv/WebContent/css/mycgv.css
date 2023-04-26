@@ -380,6 +380,99 @@ section.mypage article:first-child {
 	margin-right:10px;
 }
 
+/*****************************************
+	Notice, Board commons style sheet
+*******************************************/
+section.notice table, section.notice th, section.notice td,
+section.board table, section.board th, section.board td {
+	border:1px solid #777;
+	border-collapse:collapse;
+	text-align:center;
+	font-size:11pt;
+	color:#333;
+}
+section.notice th, section.notice td,
+section.board th, section.board td {
+	padding:6px 0;
+}
+section.notice tr > td:nth-child(2),
+section.board tr > td:nth-child(2) {
+	text-align:left;
+	text-indent:20px;
+}
+section.notice tr > td:nth-child(2) > a,
+section.board tr > td:nth-child(2) > a{
+	text-decoration:none;
+}
+section.notice tr > td:nth-child(2) > a:hover,
+section.board tr > td:nth-child(2) > a:hover{
+	text-decoration:underline;
+}
+section.notice tr:first-child,
+section.board tr:nth-child(2) {
+	background:#ddd;
+	color:#333;	
+}
+section.notice tr:last-child td,
+section.board tr:last-child td {
+	border:1px solid white;
+	padding-bottom:40px;
+}
+
+/*****************************************
+	Notice style sheet
+*******************************************/
+section.notice table.notice_content th {
+	background:#ddd;
+	color:#333;	
+	width:140px;
+	padding:10px 0;
+}
+section.notice table.notice_content tr:first-child td {
+	background:white;
+}
+section.notice table.notice_content tr:nth-child(2) td {
+	padding-left:20px;
+	text-indent:0px;
+}
+section.notice table.notice_content tr:last-child td {
+	padding-top:30px;
+}
+section.notice table.notice_content tr:last-child td button:first-child {
+	margin-right:10px;
+}
+
+/*****************************************
+	Board style sheet
+*******************************************/
+section.board table.board_list tr:first-child td {
+	border:1px solid white;	
+	border-bottom:1px solid #777;
+	text-align:right;
+}
+section.board table.board_list tr:first-child td button{
+	margin:0 20px 5px 0;
+	width:70px;
+	padding:7px 0;
+}
+section.board form[name='writeForm'] table button {
+	width:100px;
+	margin:40px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
