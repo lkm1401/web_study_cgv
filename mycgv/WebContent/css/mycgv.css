@@ -9,12 +9,12 @@
 	,section.login, section.join, section.mypage, section.notice
 	,section.board, section.admin {
 	width:1000px; margin:auto;
-	border:1px solid blue;
+	/* border:1px solid blue; */
 }
 section.login form[name='loginForm'], section.join form[name='joinForm']
 , section.mypage > div, section.notice table, section.board table
 , section.admin > div {
-	border:1px solid red;
+	/* border:1px solid red; */
 	width:70%;
 	margin:auto;
 }
@@ -58,6 +58,7 @@ section.login form[name='loginForm'], section.join form[name='joinForm']
 header {
 	background-image: url(http://localhost:9000/mycgv/images/bg_header.gif);
 	height:149px;
+	/* position: sticky; top: 0; */
 }
 .header_menu > nav > ul {
 	padding-left: 400px;
@@ -180,7 +181,7 @@ header {
 	Index-Content style sheet
 ******************************/
 .section1 {
-			background-image:url("http://localhost:9000/mycgv/images/carousel_bg.png");
+	background-image:url("http://localhost:9000/mycgv/images/carousel_bg.png");
 }
 .section1_d1, .section2, .section3 {
 	text-align:center;
@@ -231,7 +232,7 @@ header {
 	Login Form style sheet
 ******************************/
 section.login form ul {
-	border:1px solid blue;
+	/* border:1px solid blue; */
 	list-style-type:none;
 	margin:0px; padding:0px;
 }
@@ -281,7 +282,7 @@ section.login form ul li:last-child > span:first-child{
 	Join Form style sheet
 ******************************/
 section.join form ul {
-	border:1px solid blue;
+	/* border:1px solid blue; */
 	font-size:10pt;
 	list-style-type:none;
 }
@@ -388,7 +389,7 @@ section.board table, section.board th, section.board td {
 	border:1px solid #777;
 	border-collapse:collapse;
 	text-align:center;
-	font-size:11pt;
+	font-size:10pt;
 	color:#333;
 }
 section.notice th, section.notice td,
@@ -431,7 +432,8 @@ section.notice table.notice_content th {
 section.notice table.notice_content tr:first-child td {
 	background:white;
 }
-section.notice table.notice_content tr:nth-child(2) td {
+section.notice table.notice_content tr:nth-child(2) td,
+section.board table.board_content tr:nth-child(2) td {
 	padding-left:20px;
 	text-indent:0px;
 }
@@ -457,7 +459,8 @@ section.board table.board_list tr:first-child td button{
 }
 section.board form[name='writeForm'] table button,
 section.board table.board_content button,
-section.board form[name='updateForm'] table button {
+section.board form[name='updateForm'] table button,
+section.board form[name='deleteForm'] table button {
 	width:100px;
 	margin:40px 5px;
 }
@@ -490,13 +493,27 @@ section.board form[name='writeForm'] table textarea,
 section.board form[name='updateForm'] table textarea {
 	height:140px;
 }
-/* section.board form[name='writeForm'] input[name='id'] {
+section.board form[name='deleteForm'] img {
+	width:30%;
+} 
+section.board form[name='deleteForm'] table td {
+	border:1px solid white;
+	background:white;
+	font-size:13pt;
 	font-weight:700;
-}  */
+}
 
-
-
-
+/*****************************************
+	Board style sheet
+*******************************************/
+section.admin div {
+	height:300px;
+	text-align:center;
+	padding-top:30px;
+}
+section.admin div article {	
+	padding:10px;
+}
 
 
 
