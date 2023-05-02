@@ -5,6 +5,7 @@
 <title>MYCGV</title>
 <link rel="stylesheet" href="http://localhost:9000/mycgv/css/mycgv.css">
 <script src="http://localhost:9000/mycgv/js/mycgv_javascript.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -59,7 +60,8 @@
 					<li>
 						<label>주소</label>
 						<input type="text" name="addr1" class="input1" id="addr1">
-						<button type="button" class="btn_style2">주소찾기</button>
+						<button type="button" class="btn_style2" 
+							onclick="searchAddr()">주소찾기</button>
 					</li>
 					<li>
 						<label>상세주소</label>

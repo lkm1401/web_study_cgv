@@ -1,4 +1,33 @@
 /*******************************************
+	게시판 글쓰기 폼 체크
+********************************************/
+function boardFormCheck(){
+	let btitle = document.getElementById("btitle");
+	if(btitle.value == ""){
+		alert("제목을 입력해주세요");
+		btitle.focus();
+	}else{
+		//서버전송
+		writeForm.submit();
+	}
+}
+
+/*******************************************
+	회원가입 폼 체크 - 주소찾기 : daum API 
+********************************************/
+function searchAddr(){
+	new daum.Postcode({
+        oncomplete: function(data) {
+        	//alert(data.address);
+        	document.getElementById("addr1").value 
+        		= "("+data.zonecode+") "+ data.address;
+        	document.getElementById("addr2").focus();
+        }
+    }).open();
+	
+}
+
+/*******************************************
 	회원가입 폼 체크 - 이메일 체크 
 ********************************************/
 function emailCheck(){
@@ -10,7 +39,8 @@ function emailCheck(){
 		email3.focus();
 		email2.value = "";
 	}else if(email3.value == "self"){
-		
+		email2.value = "";
+		email2.focus();
 	}else{
 		email2.value = email3.value;		
 	}
@@ -26,22 +56,24 @@ function passCheck(){
 	let cmsg = document.getElementById("cmsg");
 	
 	//pass,cpass의 값이 있는 경우에만 체크
-	if(pass.value != "" && cpass != ""){		
-		if(pass.value == cpass.value){
-			cmsg.innerHTML = "비밀번호가 동일합니다.";
-			cmsg.style.color = "blue";
-			cmsg.style.display = "block";
-			cmsg.style.fontSize = "11px";
-			document.getElementById("name").focus();
-		}else{
-			cmsg.innerHTML = "비밀번호가 동일하지 않습니다. 다시 입력해주세요";
-			cmsg.style.color = "red";
-			cmsg.style.display = "block";
-			cmsg.style.fontSize = "11px";
-			pass.value = "";
-			cpass.value = "";
-			pass.focus();
-		}		
+	if(pass.value != ""){
+		if(cpass.value != ""){
+			if(pass.value == cpass.value){
+				cmsg.innerHTML = "비밀번호가 동일합니다.";
+				cmsg.style.color = "blue";
+				cmsg.style.display = "block";
+				cmsg.style.fontSize = "11px";
+				document.getElementById("name").focus();
+			}else{
+				cmsg.innerHTML = "비밀번호가 동일하지 않습니다. 다시 입력해주세요";
+				cmsg.style.color = "red";
+				cmsg.style.display = "block";
+				cmsg.style.fontSize = "11px";
+				pass.value = "";
+				cpass.value = "";
+				pass.focus();
+			}	
+		}
 	}
 }
 
