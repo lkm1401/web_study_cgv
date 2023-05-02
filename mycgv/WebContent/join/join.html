@@ -30,7 +30,9 @@
 					</li>
 					<li>
 						<label>비밀번호 확인</label>
-						<input type="password" name="cpass" class="input1" id="cpass">
+						<input type="password" name="cpass" class="input1" id="cpass"
+						     onblur="passCheck()">
+                        <span id="cmsg">test</span>						     
 					</li>
 					<li>
 						<label>성명</label>
@@ -45,12 +47,13 @@
 						<label>이메일</label>
 						<input type="text" name="email1" id="email1"> @
 						<input type="text" name="email2" id="email2">
-						<select id="email3">
+						<select id="email3" onchange="emailCheck()">
 							<option value="default">선택</option>
 							<option value="naver.com">네이버</option>
-							<option value="google.com">구글</option>
+							<option value="gmail.com">구글</option>
 							<option value="daum.net">다음</option>
 							<option value="korea.com">코리아</option>
+							<option value="self">직접입력</option>
 						</select>
 					</li>
 					<li>
